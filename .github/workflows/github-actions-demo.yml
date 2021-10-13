@@ -15,3 +15,9 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+
+  deploy:
+    container: node:16
+    steps:
+      - run: echo "Running on node container!"
+      - run: echo " The branch is ${{ github.ref }}" 
