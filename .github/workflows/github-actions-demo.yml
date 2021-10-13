@@ -17,7 +17,7 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
 
   deploy:
-    container: node:16
+    runs-on: docker://node:16
     steps:
       - run: echo "Running on node container!"
       - run: echo " The branch is ${{ github.ref }}" 
