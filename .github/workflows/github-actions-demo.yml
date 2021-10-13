@@ -16,8 +16,10 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
 
-  development-deploy:
-    if: contains( github.ref, 'development')
+  failing_test:
     runs-on: ubuntu-latest
     steps:
       - run: echo " The branch is ${{ github.ref }}" 
+      - name: Runs a failing test
+        uses: actions/checkout@v2
+      - run: python3 failing_test1.py
