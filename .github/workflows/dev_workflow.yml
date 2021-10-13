@@ -17,8 +17,8 @@ jobs:
 
   frontend_deploy:
     runs-on: ubuntu-latest
-      steps:
-        - run: echo "Frontend deploy configs here"
+    steps:
+      - run: echo "Frontend deploy configs here"
 
   backend_deploy:
     runs-on: ubuntu-latest
