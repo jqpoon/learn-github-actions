@@ -16,8 +16,8 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
 
-  deploy:
-    runs-on: docker://node:16
+  development-deploy:
+    if: contains( github.ref, 'development')
+    runs-on: ubuntu-latest
     steps:
-      - run: echo "Running on node container!"
       - run: echo " The branch is ${{ github.ref }}" 
